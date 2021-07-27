@@ -1,9 +1,9 @@
 const QuizController = require("../controllers/quiz.controller");
 
 module.exports = app => {
-    app.post('/api/quiz', QuizController.createNewQuiz);
-    app.get('/api/quiz', QuizController.findAllQuizzes);
-    app.get('/api/quiz/:id', QuizController.getQuiz);
-    app.put('/api/quiz/:id', QuizController.updateQuiz);
-    app.delete('/api/quiz/:id', QuizController.deleteQuiz);
+    app.post('/api/quizzes', QuizController.createNewQuiz);
+    app.get('/api/quizzes', QuizController.findAllQuizzes);
+    app.get('/api/quizzes/:id', QuizController.getQuiz);
+    app.put('/api/quizzes/:id', QuizController.updateQuiz);
+    app.delete('/api/quizzes/:id', QuizController.deleteQuiz);
 }
