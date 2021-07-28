@@ -9,7 +9,7 @@ const QuizList = props => {
             { quizzes.map((quiz, idx)=>{
                 return (
                     <div key={idx}>
-                        <p>{quiz.q1}</p>
+                        <p>{quiz.name}</p>
                     </div>
                 )
             })}
