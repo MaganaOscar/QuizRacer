@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../css/QuizList.module.css';
+import { Link } from '@reach/router';
 
 const QuizList = props => {
     const { quizzes} = props;
@@ -9,7 +10,7 @@ const QuizList = props => {
             { quizzes.map((quiz, idx)=>{
                 return (
                     <div key={idx}>
-                        <p>{quiz.name}</p>
+                        <p><Link to={`/quizzes/${quiz._id}`}>{quiz.name}</Link></p>
                     </div>
                 )
             })}

@@ -34,7 +34,10 @@ const QuizForm = props => {
                                 </div>
                         )
                     })}
-                    <button type="button" onClick={() => {incrementQCount(); addQuestion(questionCount+1)}}>Add Another Question</button>
+                    {
+                        questionCount + 1 <= 10 &&
+                        <button type="button" onClick={() => {incrementQCount(); addQuestion(questionCount+1)}}>Add Another Question</button>
+                    }
                     <button type="submit">Submit New Quiz</button>
                 </form>
             </div>

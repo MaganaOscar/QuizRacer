@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Header from '../components/Header';
 import QuizList from '../components/QuizList';
 
 const AllQuizzes = () => {
@@ -18,7 +19,16 @@ const AllQuizzes = () => {
     return (
         <div>
             {loaded && 
+                <>
+                <Header 
+                    home={false}
+                    btn1=""
+                    btn1Link=""
+                    btn2=""
+                    btn2Link=""
+                />
                 <QuizList quizzes={quizzes}/>
+                </>
             }
         </div>
     )
