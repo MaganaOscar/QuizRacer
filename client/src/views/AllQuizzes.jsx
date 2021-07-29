@@ -3,7 +3,8 @@ import axios from 'axios';
 import Header from '../components/Header';
 import QuizList from '../components/QuizList';
 
-const AllQuizzes = () => {
+const AllQuizzes = (props) => {
+    const { select } = props;
     const [quizzes, setQuizzes] = useState([]);
     const [loaded, setLoaded] = useState(false);
 
@@ -22,12 +23,16 @@ const AllQuizzes = () => {
                 <>
                 <Header 
                     home={false}
-                    btn1=""
-                    btn1Link=""
+                    btn1="Create New Quiz" 
+                    btn1Link="/quizzes/new"
                     btn2=""
                     btn2Link=""
                 />
-                <QuizList quizzes={quizzes}/>
+                {
+                    select ?
+                    <QuizList select={select} quizzes={quizzes}/>:
+                    <QuizList select={select} quizzes={quizzes}/>
+                }
                 </>
             }
         </div>

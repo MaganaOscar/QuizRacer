@@ -5,6 +5,7 @@ import Main from './views/Main';
 import AllQuizzes from './views/AllQuizzes';
 import NewQuiz from './views/NewQuiz';
 import ShowQuiz from './views/ShowQuiz';
+import SelectQuiz from './views/SelectQuiz';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Main path="/"/>
         <AllQuizzes path="/quizzes"/>
         <NewQuiz path="/quizzes/new"/>
+        <SelectQuiz path="/quizzes/select"/>
         <ShowQuiz path="/quizzes/:id"/>
       </Router>
     </div>

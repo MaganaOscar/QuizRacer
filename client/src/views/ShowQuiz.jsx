@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import axios from 'axios'
 
 const ShowQuiz = props => {
-    const { id } = props
+    const { id, select } = props
     const [quiz, setQuiz] = useState();
     const [loaded, setLoaded] = useState(false);
     let quizQuestions = [];
@@ -53,6 +53,12 @@ const ShowQuiz = props => {
 
                             )
                         })
+                    }
+                </div>
+                <div>
+                    {
+                        select &&
+                            <p>Hello</p>
                     }
                 </div>
             </div>
